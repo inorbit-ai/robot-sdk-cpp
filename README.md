@@ -1,4 +1,4 @@
-# robot-sdk-cpp
+# InOrbit Robot SDK C++ Library
 
 The InOrbit Robot SDK C++11 **header-only** library allows C++ programs to communicate with the **InOrbit Agent** that must run also on the robot. It's goal is to ease the integration between InOrbit and any other custom software running on the robot.
 
