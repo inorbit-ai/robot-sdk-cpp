@@ -1,6 +1,6 @@
 # C++ Robot SDK demo
 
-This is a syntethic demo scenario to illustrate how the C++ SDK can be used
+This is a synthetic demo scenario to illustrate how the C++ SDK can be used
 to connect a robot to InOrbit.
 
 ## How to run
