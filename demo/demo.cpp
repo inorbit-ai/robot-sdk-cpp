@@ -120,7 +120,7 @@ int main(void) {
   while (true) {
 
     // Wait for the signal to start running the demo
-    cout << "Waiting for signal to start the demo" << endl;
+    cout << "Waiting for " <<  DEMO_START_TMP_FILE << " creation to start the demo" << endl;
     while (!file_exists(DEMO_START_TMP_FILE)) {
       sleep(1);
     }
