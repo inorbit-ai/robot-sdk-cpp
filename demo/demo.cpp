@@ -26,9 +26,9 @@ struct Position {
 
 // Rotation struct used on Pose
 struct Rotation {
-  Rotation(const float &i, const float &j, const float &k, const float &w)
-    : i(i), j(j), k(k), w(w) {}
-  float i, j, k, w;
+  Rotation(const float &x, const float &y, const float &z, const float &w)
+    : x(x), y(y), z(z), w(w) {}
+  float x, y, z, w;
 };
 
 // Data point struct used on the simulation
@@ -136,7 +136,7 @@ int main(void) {
     for (list<RobotDataPoint>::iterator it = demo_data.begin(); it != demo_data.end(); ++it) {
       // Publish the pose
       double location[] = {it->position.x, it->position.y, 0};
-      double rotation_quaternion[] = {it->rotation.i, it->rotation.j, it->rotation.k, it->rotation.w};
+      double rotation_quaternion[] = {it->rotation.x, it->rotation.y, it->rotation.z, it->rotation.w};
       sdk.sendPose("map", location, rotation_quaternion);
       // Publish other key value pairs
       sdk.sendKeyValue("battery percent", it->battery);
