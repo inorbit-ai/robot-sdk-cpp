@@ -26,3 +26,10 @@ When running this program, the Agent takes care of reporting the data to the InO
 ## Including the Library in a Project
 
 This library can be included in any C++11 project. To do so, you have to copy `include/inorbit` to your project and include the `inorbit.hpp` file from your files.
+
+## Examples
+
+To illustrate how the SDK library can be used the following examples are provided:
+
+- `example.cpp`: uses a small set of functions for sending data to InOrbit.
+- `demo/demo.cpp`: more comprehensive demo using synthetic data and InOrbit's Maps API.
