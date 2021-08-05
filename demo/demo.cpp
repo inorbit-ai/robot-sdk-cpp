@@ -12,7 +12,7 @@
 
 // The `start` file is used as a signal
 // mechanism to trigger the simulation
-#define DEMO_START_TMP_FILE "/tmp/start"
+#define DEMO_START_FILE "/tmp/start"
 #define DEMO_DATA_POINT_DELAY 1
 
 using namespace std;
@@ -120,13 +120,13 @@ int main(void) {
   while (true) {
 
     // Wait for the signal to start running the demo
-    cout << "Waiting for " <<  DEMO_START_TMP_FILE << " creation to start the demo" << endl;
-    while (!file_exists(DEMO_START_TMP_FILE)) {
+    cout << "Waiting for " <<  DEMO_START_FILE << " creation to start the demo" << endl;
+    while (!file_exists(DEMO_START_FILE)) {
       sleep(1);
     }
 
     // Remove the signal file for next iteration
-    if (remove(DEMO_START_TMP_FILE) != 0) {
+    if (remove(DEMO_START_FILE) != 0) {
       perror( "Error deleting file" );
       return -1;
     }
