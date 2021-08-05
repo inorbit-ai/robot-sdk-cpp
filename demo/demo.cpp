@@ -113,7 +113,7 @@ int main(void) {
     RobotDataPoint(Position{5, 5, 0}, Rotation{0.707, 0, 0, 0.707}, string("idle"), 100.0),
   };
 
-  // Create an InOrbitSDK object
+  // Create an InOrbitSDK object to communicate with the Agent
   inorbit::InOrbitSDK sdk;
 
   // Run forever
