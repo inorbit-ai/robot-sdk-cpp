@@ -29,7 +29,7 @@ This library can be included in any C++11 project. To do so, you have to copy `i
 
 ## Examples
 
-To illustrate how the SDK library can be used to examples are provided:
+To illustrate how the SDK library can be used the following examples are provided:
 
 - `example.cpp`: uses a small set of functions for sending data to InOrbit.
 - `demo/demo.cpp`: more comprehensive demo using synthetic data and InOrbit's Maps API.
