@@ -31,6 +31,7 @@
 #define INORBIT_SDK_DEFAULT_HOST "localhost"
 #define INORBIT_SDK_DEFAULT_PORT 5000
 
+#include <algorithm>
 #include "thirdparty/httplib.h"
 
 namespace inorbit {
@@ -136,7 +137,9 @@ inline bool InOrbitSDK::sendKeyValue(const std::string &key,
 
 inline bool InOrbitSDK::sendKeyValue(const std::string &key,
                                      const std::string &value) {
-  return doPost("/api/v1/data/" + key, value, "text/plain");
+  std::string escaped_key = key;
+  std::replace(escaped_key.begin(), escaped_key.end(), '/', '_');
+  return doPost("/api/v1/data/" + escaped_key, value, "text/plain");
 }
 
 inline bool InOrbitSDK::sendPose(const std::string &frameId, const double t[3],
