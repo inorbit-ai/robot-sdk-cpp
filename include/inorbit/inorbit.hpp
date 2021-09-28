@@ -103,8 +103,8 @@ public:
 
 protected:
   const std::string agent_host;
-  const bool log_errors;
   const int agent_port;
+  const bool log_errors;
   bool doPost(const std::string &endpoint, const std::string &data,
               const std::string &content_type);
 
